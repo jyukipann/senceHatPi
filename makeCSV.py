@@ -13,6 +13,7 @@ def stopWriting():
 	stop = True
 sense.stick.direction_any = stopWriting
 
+print("start loging. ...")
 with open(dt_now, 'w') as f:
 	writer = csv.writer(f)
 	data = getAllInfo.getAllInfo()
@@ -26,3 +27,4 @@ with open(dt_now, 'w') as f:
 				break
 		except KeyboardInterrupt:
 			break
+print("finish loging.")
