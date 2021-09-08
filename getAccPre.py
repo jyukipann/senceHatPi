@@ -8,4 +8,4 @@ z = str( round( acceleration['z'],1 ) )
 
 
 print("acc", "x :",x,"y :",y,"z :",z)
-print("pressure: ",sense.get_pressure())
+print("pressure: ",round( sense.get_pressure(),2),"hPa")
