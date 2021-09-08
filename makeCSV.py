@@ -4,7 +4,7 @@ import getAllInfo
 import csv
 import time
 #start_time = time.time()
-dt_now = dt_now.strftime('%Y-%m-%d_%H:%M:%S')+".csv"
+dt_now = dt_now.strftime('%Y-%m-%d_%H-%M-%S')+".csv"
 from sense_hat import SenseHat
 sense = SenseHat()
 stop = False
