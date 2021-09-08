@@ -7,7 +7,7 @@ def getAllInfo():
 	#[time,accel,gyro,mag,temp,humidty,pressure]
 	return {
 		"time":time.time(),
-		"accel_row":sense.accel_row,
+		"accel_row":sense.accel_raw,
 		"gyro_raw":sense.gyro_raw,
 		"compass_raw":sense.compass_raw,
 		"temp":sense.temp,
