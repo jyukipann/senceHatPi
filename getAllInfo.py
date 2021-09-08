@@ -16,5 +16,5 @@ def getAllInfo():
 
 
 if __name__ == "__main__":
-	for key, val in getAllInfo():
+	for key, val in getAllInfo().items():
 		print(key,val)
