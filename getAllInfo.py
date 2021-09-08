@@ -15,6 +15,6 @@ def getAllInfo():
 	}
 
 
-if _name_ == "__main__":
+if __name__ == "__main__":
 	for key, val in getAllInfo():
 		print(key,val)
