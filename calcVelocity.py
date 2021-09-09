@@ -12,6 +12,7 @@ print(data.shape)
 
 #重力加速度
 G = 9.80665
+gs_delta = 0.974966009
 acx, acy, acz = [header.index('accel_row_x'),header.index('accel_row_y'),header.index('accel_row_z')]
 accel2x = data[:,acx:acx+1]**2
 accel2y = data[:,acy:acy+1]**2
@@ -23,8 +24,7 @@ print(accel_raw_norm.shape)
 # print(accel_raw_norm[0])
 # print(accel_raw_norm[1])
 # print(accel_raw_norm[2])
-accel_norm = accel_raw_norm*G - G
-accel_norm = accel_norm
+accel_norm = (accel_raw_norm - gs_delta)*G
 print(accel_raw_norm.shape)
 print(accel_norm.shape)
 
@@ -42,10 +42,10 @@ x = np.array([0],dtype=np.float64)
 v = np.array([0],dtype=np.float64) #current
 last_time = accel_time[0][1]
 for i, a_t in enumerate(accel_time):
-	dt = last_time - a_t[1]
+	dt = a_t[1] - last_time
 	v[0] += a_t[0] * dt
 	velocity[i][0] = v[0]
-	x[0] += v[0]*dt
+	x[0] += v[0] * dt
 	displacement[i][0] = x[0]
 
 # a_t_v_d = np.concatenate([accel_time,velocity,displacement],axis=1)
