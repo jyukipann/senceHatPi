@@ -10,5 +10,7 @@ dtoverlay=rpi-sense
 を追記
 
 reboot
+
+pip install numpy
 ```
 
