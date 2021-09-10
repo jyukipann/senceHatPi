@@ -32,9 +32,9 @@ def getAllInfo():
 	a_l_c[0] = a_l_c[1]
 	a_l_c[1] = (norm(*ac.values())-gs_delta)*G
 	v_l_c[0] = v_l_c[1]
-	v_l_c[1] += trapezoidal(*a_l_c, dt)
+	v_l_c[1] += trapezoidal(a_l_c[0],a_l_c[1],dt)
 	x_l_c[0] = x_l_c[1]
-	x_l_c[1] += trapezoidal(*v_l_c, dt)
+	x_l_c[1] += trapezoidal(v_l_c[0],v_l_c[1],dt)
 	return {
 		"time":t_l_c[1],
 		"accel_row_x":ac["x"],
