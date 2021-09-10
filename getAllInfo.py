@@ -4,7 +4,7 @@ import time
 import math
 
 #calib
-#重力加速度g
+#重力加速度
 G = 9.80665
 #加速度センサの誤差ノルム
 gs_delta = 0.975374592
