@@ -28,7 +28,9 @@ def getAllInfo():
 	co = sense.compass_raw
 	t_l_c[0] = t_l_c[1]
 	t_l_c[1] = time.time()
-	dt = t_l_c[1] - t_l_c[0]
+	dt = 0
+	if(0 != t_l_c[0]):
+		dt = t_l_c[1] - t_l_c[0]
 	a_l_c[0] = a_l_c[1]
 	a_l_c[1] = (norm(*ac.values())-gs_delta)*G
 	v_l_c[0] = v_l_c[1]
